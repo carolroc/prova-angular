@@ -1,5 +1,13 @@
 import { Injectable } from '@angular/core';
 
+interface Disciplicas {
+  cod: string;
+  nome: string;
+  diaDaSemana: string;
+  horario: string;
+  ementa: string;
+}
+
 @Injectable()
 export class AnaDisciplinasServiceService {
   list: string[] = [];
