@@ -8,16 +8,18 @@ import { AnaComponentComponent } from './ana-component/ana-component.component';
 import { AnaListaComponentComponent } from './ana-lista-component/ana-lista-component.component';
 import { AnaDetalhesComponentComponent } from './ana-detalhes-component/ana-detalhes-component.component';
 import { RouterModule } from '@angular/router';
+import { AnaDisciplinasServiceService } from './ana-disciplinas-service.service';
 
 const ROUTES = [
-  {path:'', component: AnaComponentComponent},
-  {path:'aulas', component: AnaListaComponentComponent},
-  {path:'aula/:id', component: AnaDetalhesComponentComponent}
-]
+  { path: '', component: AnaComponentComponent },
+  { path: 'aulas', component: AnaListaComponentComponent },
+  { path: 'aula/:id', component: AnaDetalhesComponentComponent },
+];
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, RouterModule.forRoot(ROUTES) ],
-  declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],
+  declarations: [AppComponent, HelloComponent],
+  bootstrap: [AppComponent],
+  providers: [AnaDisciplinasServiceService],
 })
-export class AppModule { }
+export class AppModule {}
