@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AnaDisciplinasServiceService } from '../ana-disciplinas-service.service';
 
 @Component({
   selector: 'app-ana-lista-component',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnaListaComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor(public disciplina: AnaDisciplinasServiceService) { }
 
   ngOnInit() {
   }
