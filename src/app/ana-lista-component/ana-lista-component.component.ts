@@ -10,6 +10,11 @@ export class AnaListaComponentComponent implements OnInit {
   list: string[] = [];
   constructor(public disciplina: AnaDisciplinasServiceService) {
   }
+  cod: string;
+  nome: string;
+  diaDaSemana: string;
+  horario: string;
+  ementa: string;
 
   ngOnInit() {}
 
