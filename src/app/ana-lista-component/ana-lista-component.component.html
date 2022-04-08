@@ -1,5 +1,34 @@
 <h3>Aulas</h3>
 
+<p>Cod</p>
+<input #cod type="text" />
+
+<p>Nome</p>
+<input #nome type="text" />
+
+<p>Dia da Semana</p>
+<input #diaDaSemana type="text" />
+
+<p>Horário</p>
+<input #horario type="text" />
+
+<p>Ementa</p>
+<input #ementa type="text" />
+
+<button
+  (click)="
+    disciplina.add(
+      cod.value,
+      nome.value,
+      diaDaSemana.value,
+      horario.value,
+      ementa.value
+    )
+  "
+>
+  +
+</button>
+
 <table>
   <thead>
     <tr>
@@ -10,7 +39,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of getList(); index as i">
+    <tr *ngFor="let item of disciplina.getlist(); index as i">
       <td>{{ item.nome }}</td>
     </tr>
   </tbody>

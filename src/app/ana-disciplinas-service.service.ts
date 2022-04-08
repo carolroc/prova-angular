@@ -20,14 +20,15 @@ export class AnaDisciplinasServiceService {
     horario: string,
     ementa: string
   ) {
-    this.list.push({cod, nome, diaDaSemana, horario, ementa});
+    this.list.push({ cod, nome, diaDaSemana, horario, ementa });
+    alert({ cod, nome, diaDaSemana, horario, ementa });
   }
 
   remove(index: number) {
     this.list.splice(index, 1);
   }
 
-  getlist(){
+  getList() {
     return this.list;
   }
 }
