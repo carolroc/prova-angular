@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 interface AnaDisciplinasService {
   cod: string;
