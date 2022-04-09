@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { AnaDisciplinasServiceService } from '../ana-disciplinas-service.service';
 
 @Component({
   selector: 'app-ana-detalhes-component',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ana-detalhes-component.component.css']
 })
 export class AnaDetalhesComponentComponent implements OnInit {
-
-  constructor() { }
+  item;
+  constructor(private route: ActivatedRoute,public disciplina: AnaDisciplinasServiceService) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe((params) => {
+      this.item = this.disciplina.list[params.get('id')];
+    })
   }
 
 }
