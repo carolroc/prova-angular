@@ -12,7 +12,14 @@ interface AnaDisciplinasService {
 @Injectable()
 export class AnaDisciplinasServiceService {
   list: Array<AnaDisciplinasService> = [];
-  constructor() {}
+  constructor() {
+    this.list= [{cod: 'ISW014A',
+    nome: 'Projeto de Encontrabilidade',
+    diaDaSemana: 'Segunda',
+    horario: '19h',
+    ementa: 'Teoria Geral. Marcação para encontrabilidade. Microformatos. Conteúdo. Rede Social. Estratégias Server-Side. Como evitar armadilhas de encontrabilidade. Pesquisas. Análises'}]
+
+  }
 
   add(
     cod: string,
