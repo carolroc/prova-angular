@@ -1,6 +1,5 @@
 <h3>Aulas</h3>
 
-
 <p>Cod</p>
 <input #cod type="text" />
 
@@ -41,10 +40,11 @@
   </thead>
   <tbody>
   <tr *ngFor="let disciplinas of disciplina.getList(); index as i">
-  <td>{{ disciplinas.cod }}</td>
-  <td>{{ disciplinas.nome }}</td>
-  <td>{{ disciplinas.diaDaSemana }}</td>
-  <td>{{ disciplinas.horario }}</td>
+  <td><a [routerLink] = "['/aulas',i]">{{ disciplinas.cod }}</a></td>
+  <td><a [routerLink] = "['/aulas',i]">{{ disciplinas.nome }}</a></td>
+  <td><a [routerLink] = "['/aulas',i]">{{ disciplinas.diaDaSemana }}</a></td>
+  <td [routerLink] = "['/aulas',i]"><a>{{ disciplinas.diaDaSemana }}</a></td>
+  <td [routerLink] = "['/aulas',i]"><a>{{ disciplinas.horario }}</a></td>
   <td>
     <span (click)="disciplina.remove(i)" style="cursor: pointer">-</span>
   </td>
