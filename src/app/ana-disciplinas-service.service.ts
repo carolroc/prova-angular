@@ -29,7 +29,6 @@ export class AnaDisciplinasServiceService {
     ementa: string
   ) {
     this.list.push({ cod, nome, diaDaSemana, horario, ementa });
-    alert({ cod, nome, diaDaSemana, horario, ementa });
   }
 
   remove(index: number) {
