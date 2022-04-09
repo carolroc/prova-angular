@@ -13,12 +13,18 @@ import { AnaDisciplinasServiceService } from './ana-disciplinas-service.service'
 const ROUTES = [
   { path: '', component: AnaComponentComponent },
   { path: 'aulas', component: AnaListaComponentComponent },
-  { path: 'aula/:index', component: AnaDetalhesComponentComponent },
+  { path: 'aulas/:index', component: AnaDetalhesComponentComponent },
 ];
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],
-  declarations: [AppComponent, HelloComponent,AnaComponentComponent,AnaListaComponentComponent,AnaDetalhesComponentComponent],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    AnaComponentComponent,
+    AnaListaComponentComponent,
+    AnaDetalhesComponentComponent,
+  ],
   bootstrap: [AppComponent],
   providers: [AnaDisciplinasServiceService],
 })
