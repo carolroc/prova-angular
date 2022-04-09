@@ -39,15 +39,25 @@
     </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let disciplinas of disciplina.getList(); index as i">
-  <td><a [routerLink] = "['/aulas/',i]">{{ disciplinas.cod }}</a></td>
-  <td><a [routerLink] = "['/aulas',i]">{{ disciplinas.nome }}</a></td>
-  <td><a [routerLink] = "['/aulas',i]">{{ disciplinas.diaDaSemana }}</a></td>
-  <td [routerLink] = "['/aulas',i]"><a>{{ disciplinas.diaDaSemana }}</a></td>
-  <td [routerLink] = "['/aulas',i]"><a>{{ disciplinas.horario }}</a></td>
-  <td>
-    <span (click)="disciplina.remove(i)" style="cursor: pointer">-</span>
-  </td>
-</tr>
+    <tr *ngFor="let disciplinas of disciplina.getList(); index as i">
+      <td>
+        <a [routerLink]="['/aulas/', i]">{{ disciplinas.cod }}</a>
+      </td>
+      <td>
+        <a>{{ disciplinas.nome }}</a>
+      </td>
+      <td>
+        <a>{{ disciplinas.diaDaSemana }}</a>
+      </td>
+      <td>
+        <a>{{ disciplinas.diaDaSemana }}</a>
+      </td>
+      <td>
+        <a>{{ disciplinas.horario }}</a>
+      </td>
+      <td>
+        <span (click)="disciplina.remove(i)" style="cursor: pointer">-</span>
+      </td>
+    </tr>
   </tbody>
 </table>
