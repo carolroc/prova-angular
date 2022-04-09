@@ -40,7 +40,7 @@
   </thead>
   <tbody>
   <tr *ngFor="let disciplinas of disciplina.getList(); index as i">
-  <td><a [routerLink] = "['/aulas',i]">{{ disciplinas.cod }}</a></td>
+  <td><a [routerLink] = "['/aulas/',i]">{{ disciplinas.cod }}</a></td>
   <td><a [routerLink] = "['/aulas',i]">{{ disciplinas.nome }}</a></td>
   <td><a [routerLink] = "['/aulas',i]">{{ disciplinas.diaDaSemana }}</a></td>
   <td [routerLink] = "['/aulas',i]"><a>{{ disciplinas.diaDaSemana }}</a></td>
