@@ -43,18 +43,10 @@
       <td>
         <a [routerLink]="['/aulas/', i]">{{ disciplinas.cod }}</a>
       </td>
-      <td>
-        <a>{{ disciplinas.nome }}</a>
-      </td>
-      <td>
-        <a>{{ disciplinas.diaDaSemana }}</a>
-      </td>
-      <td>
-        <a>{{ disciplinas.diaDaSemana }}</a>
-      </td>
-      <td>
-        <a>{{ disciplinas.horario }}</a>
-      </td>
+      <td>{{ disciplinas.nome }}</td>
+      <td>{{ disciplinas.diaDaSemana }}</td>
+      <td>{{ disciplinas.diaDaSemana }}</td>
+      <td>{{ disciplinas.horario }}</td>
       <td>
         <span (click)="disciplina.remove(i)" style="cursor: pointer">-</span>
       </td>
