@@ -18,7 +18,7 @@ const ROUTES = [
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(ROUTES)],
-  declarations: [AppComponent, HelloComponent],
+  declarations: [AppComponent, HelloComponent,AnaComponentComponent,AnaListaComponentComponent,AnaDetalhesComponentComponent],
   bootstrap: [AppComponent],
   providers: [AnaDisciplinasServiceService],
 })
