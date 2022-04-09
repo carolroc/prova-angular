@@ -13,7 +13,7 @@ export class AnaDetalhesComponentComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe((params) => {
-      this.item = this.disciplina.list[params.get('id')];
+      this.item = this.disciplina.list[params.get('index')];
     })
   }
 

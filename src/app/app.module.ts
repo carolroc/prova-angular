@@ -13,7 +13,7 @@ import { AnaDisciplinasServiceService } from './ana-disciplinas-service.service'
 const ROUTES = [
   { path: '', component: AnaComponentComponent },
   { path: 'aulas', component: AnaListaComponentComponent },
-  { path: 'aula/:id', component: AnaDetalhesComponentComponent },
+  { path: 'aula/:index', component: AnaDetalhesComponentComponent },
 ];
 
 @NgModule({
